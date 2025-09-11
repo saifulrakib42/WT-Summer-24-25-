@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: aquamarine;">
+    <head>
+        <style>
+            
+            div.overflow{
+                background-color: aquamarine;
+                width: 150px;
+                Height: 70px;
+                padding: auto;
+                outline-style: solid;
+                outline-width: 2px;
+                outline-color: red;
+                overflow: auto;
+            }
+            div.form{
+                background-color: rgb(255, 255, 255);
+                color: black;
+                padding-top: 5px;
+                padding-bottom: 10px;
+                padding-left: 4px;
+                padding-right: 4px;
+                width: fit-content;
+                outline-style: solid;
+                outline-width: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <center> 
+            <h1 style="color: darkblue;"> Bank Management System </h1>
+            <h3 style="color: darkblue;"> Your Trusted Financial Prtner</h3>
+        </center>
+        <h3 style="color: black;"><b>Customer Registration Form</b></h3>
+        <div class="form" >
+            <table>
+                <tr>
+                    <td>Full Name:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><input type="radio">Male <input type="radio">Female <input type="radio">Other</td>
+                </tr>
+                <tr>
+                    <td>Marital Status:</td>
+                    <td>
+                        <select name="maritalStatus" id="1">
+                            <option value="single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Account Type:</td>
+                    <td>
+                        <select name="accType" id="2">
+                            <option value="savings">Savings</option>
+                            <option value="FD">Fixed Deposit</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Initial Deposit:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Email Address:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea name="address" id="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Occupation:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>National ID (NID):</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Set Password</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Upload ID</td>
+                    <td><input type="button" value="Choose File"><input type="image" src="" alt="No File Chosen"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="TOS" id="1"> Iagree to the terms and conditions</td>
+                </tr>
+            </table>
+            <center>
+                <input  value="Register" type="button" name="register" id="5">  <input value="Clear" type="button" name="clear" id="6"> 
+            </center>
+        </div>
+        <br>
+        <div class="overflow">
+            This is demo text for overflow with auto style qwe qwrfq wqr wqr wqrwqr wqr wrwq rwr r qwra fwea afwa wf af wfawfsf
+        </div>
+    </body>
+</html>
