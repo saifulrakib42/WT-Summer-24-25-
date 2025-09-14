@@ -1,61 +1,4 @@
-<?php
-$fullname = $email = $username = $gender = "";
-$fullnameErr = $emailErr = $usernameErr = $passwordErr = $confirmErr = $genderErr = "";
-$success = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Full Name
-    if (empty($_POST["fullname"])) {
-        $fullnameErr = "Full Name is required";
-    } else {
-        $fullname = ($_POST["fullname"]);
-    }
-
-    // Email
-    if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
-    } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "Invalid email format";
-    } else {
-        $email = ($_POST["email"]);
-    }
-
-    // Username
-    if (empty($_POST["username"])) {
-        $usernameErr = "Username is required";
-    } else {
-        $username = ($_POST["username"]);
-    }
-
-    // Password
-    if (empty($_POST["password"])) {
-        $passwordErr = "Password is required";
-    } elseif (strlen($_POST["password"]) < 4) {
-        $passwordErr = "Password must be at least 6 characters";
-    } else {
-        $password = $_POST["password"];
-    }
-
-    // Confirm Password
-    if (empty($_POST["confirm_password"])) {
-        $confirmErr = "Confirm your password";
-    } elseif ($_POST["confirm_password"] != $_POST["password"]) {
-        $confirmErr = "Passwords do not match";
-    }
-
-    // Gender
-    if (empty($_POST["gender"])) {
-        $genderErr = "Select your gender";
-    } else {
-        $gender = $_POST["gender"];
-    }
-
-    // Registration successful
-    if (empty($fullnameErr) && empty($emailErr) && empty($usernameErr) && empty($passwordErr) && empty($confirmErr) && empty($genderErr)) {
-        $success = " Registration successful! Now you can login.";
-    }
-}
-?>
+<?php include '../PHP/regvalid.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -66,27 +9,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <h2>Registration</h2>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
 
             
             <input type="text" name="fullname" placeholder="Full Name">
-            <?php echo $fullnameErr; ?><br>
+            <?php echo $fullnameError; ?><br>
 
             
             <input type="email" name="email" placeholder="Email Address">
-            <?php echo $emailErr; ?><br>
+            <?php echo $emailError; ?><br>
 
            
             <input type="text" name="username" placeholder="Username">
-            <?php echo $usernameErr; ?><br>
+            <?php echo $usernameError; ?><br>
 
            
             <input type="password" name="password" placeholder="Password">
-            <?php echo $passwordErr; ?><br>
+            <?php echo $passwordError; ?><br>
 
             
             <input type="password" name="confirm_password" placeholder="Confirm Password">
-            <?php echo $confirmErr; ?><br>
+            <?php echo $confirmPasswordError; ?><br>
+
+            <input type="file" name="photo" placeholder="Select file">
+            <?php echo $photoError; ?><br>
 
            
             <div class="gender-box">
@@ -94,14 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label><input type="radio" name="gender" value="Female"> Female</label>
                 <label><input type="radio" name="gender" value="Other"> Other</label>
             </div>
-            <?php echo $genderErr; ?><br>
+            <?php echo $genderError; ?><br>
 
            
-            <button type="submit">Register</button>
+            <button type="submit"  name="Register">Register</button>
             <a href="login.php">Already have an account? Login</a>
 
             
-            <p class="success"><?php echo $success; ?></p>
+        
         </form>
     </div>
 </body>

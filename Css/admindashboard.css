@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Dashboard Container */
+.dashboard {
+    background: #fff;
+    width: 850px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading */
+.dashboard h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Profile Image */
+.dashboard img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #4facfe;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Sub-headings */
+.dashboard h3 {
+    margin: 20px 0 15px;
+    color: #444;
+    border-bottom: 2px solid #4facfe;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* User info table */
+.dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background: #fafafa;
+}
+
+.dashboard table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.dashboard table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Account Options */
+.dashboard ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.dashboard ul li {
+    margin: 10px 0;
+}
+
+.dashboard ul li a {
+    text-decoration: none;
+    color: #fff;
+    background: #4facfe;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.dashboard ul li a:hover {
+    background: #00c6ff;
+}
+
+/*  Back Button */
+.dashboard p a {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff6b6b;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.dashboard p a:hover {
+    background: #ff4757;
+}

@@ -1,0 +1,84 @@
+/* Reset some defaults */
+body, h1, table {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page background */
+body {
+    background: #f4f6f9;
+    color: #333;
+    padding: 30px;
+}
+
+/* Page heading */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+/* Table styling */
+table {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Table headers */
+table th {
+    background: #007bff;
+    color: #fff;
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 15px;
+}
+
+/* Table rows */
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+
+/* Alternate row color */
+table tr:nth-child(even) {
+    background: #f9fbfc;
+}
+
+/* Hover effect */
+table tr:hover {
+    background: #eef5ff;
+    transition: 0.2s;
+}
+
+/* Product images */
+table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Back button link */
+a {
+    display: inline-block;
+    margin: 10px auto;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #0056b3;
+}

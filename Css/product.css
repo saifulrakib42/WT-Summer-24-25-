@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Dashboard Container */
+.container {
+    background: #fff;
+    width: 95%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Row */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Heading */
+.header h1 {
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Add Product Button */
+a[href="addproduct.php"] {
+    text-decoration: none;
+    background: #4facfe;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a[href="addproduct.php"]:hover {
+    background: #00c6ff;
+}
+
+/* Back Button */
+a[href="home.php"] {
+    text-decoration: none;
+    background: #6c5ce7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a[href="home.php"]:hover {
+    background: #4834d4;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+table th {
+    background: #f6b93b;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Product Image */
+table img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Edit & Delete Buttons */
+a[href*="editproduct.php"],
+input[type="submit"][name="deleteProduct"] {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Edit Button */
+a[href*="editproduct.php"] {
+    background: #28a745;
+    color: #fff;
+}
+
+a[href*="editproduct.php"]:hover {
+    background: #218838;
+}
+
+/* Delete Button */
+input[type="submit"][name="deleteProduct"] {
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+}
+
+input[type="submit"][name="deleteProduct"]:hover {
+    background: #e84141;
+}

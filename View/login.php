@@ -1,37 +1,5 @@
-<?php
-session_start();
 
-$username = $password = "";
-$usernameErr = $passwordErr = $error = "";
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["username"])) {
-        $usernameErr = "Username is required";
-    } else {
-        $username = ($_POST["username"]);
-    }
-
-    if (empty($_POST["password"])) {
-        $passwordErr = "Password is required";
-    } else {
-        $password = $_POST["password"];
-    }
-
-    
-    if (empty($usernameErr) && empty($passwordErr)) {
-        
-        if ($username == "Admin" && $password == "1234") {
-            $_SESSION["username"] = $username; 
-            header("Location: dashboard.php");
-            exit();
-        } else {
-            $error = " Invalid username or password!";
-        }
-    }
-}
-?>
-
+<?php include '../PHP/loginvalid.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,13 +12,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="" method="post">
             
             <input type="text" name="username" placeholder="Username">
-            <?php echo $usernameErr; ?><br>
+            <?php echo $usernameError; ?><br>
 
             
             <input type="password" name="password" placeholder="Password">
-            <?php echo $passwordErr; ?><br>
+            <?php echo $passwordError; ?><br>
+              <a href="forgot_password.php">Forgot Password?</a>
 
-            <button type="submit">Login</button>
+            <button type="submit" name="login">Login</button>
+          
+
             <a href="registration.php">Go To Registration</a>
 
             

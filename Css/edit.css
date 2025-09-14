@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Edit Container */
+.edit-container {
+    background: #fff;
+    padding: 40px 35px;
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Heading */
+.edit-container h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Input fields */
+.edit-container input[type="text"],
+.edit-container input[type="email"],
+.edit-container input[type="password"],
+.edit-container input[type="file"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.edit-container input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.7);
+}
+
+/* Gender section */
+.gender-box {
+    margin: 15px 0;
+    text-align: left;
+    font-size: 15px;
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gender-box label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gender-box input {
+    margin-right: 6px;
+}
+
+/* Error message */
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Buttons */
+.edit-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #4facfe;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.edit-container input[type="submit"]:hover {
+    background: #00c6ff;
+}
+/* Back link styled as button */
+.edit-container a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff4b5c;   /* red background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.edit-container a:hover {
+    background: #e63946;   /* darker red on hover */
+}
+
+
+/* Current photo text */
+.edit-container p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
