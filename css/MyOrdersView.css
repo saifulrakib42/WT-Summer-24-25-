@@ -1,0 +1,35 @@
+#order-details-content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+#order-details-content th {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+#order-details-content td {
+    padding: 10px 5px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    color: #555;
+}
+
+#order-details-content tr {
+    margin-bottom: 6px;
+    display: table-row;
+}
+
+.modal-header .modal-title {
+    font-size: 1.25rem;
+    color: #222;
+}
+
+.modal-footer .btn {
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,113 @@
+body {
+  background:black;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 70px; /* space for fixed navbar */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Card container */
+.login-card {
+  display: flex;
+  background: #fff;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  margin: 50px auto 0 auto; /* below navbar */
+  position: relative;
+  z-index: 1;
+}
+
+/* Left: form */
+.form-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.form-section h3 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #000;
+}
+
+.form-control {
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #0d6efd;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Right: branding */
+.branding-section {
+  flex: 1;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.branding-section img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.branding-section h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #333;
+}
+
+.branding-section p {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+  .branding-section {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,18 @@
+ body {
+            background: white;
+            min-height: 200vh;
+        }
+        .content {
+            margin-top: 80px;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.95);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.03);
+        }
+        .product-image {
+            height: 400px;
+            object-fit: cover;
+        }
